@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>edderVOLT - INIT Series</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			/* Estilos para los bloques específicos */
+			.bloque-wena {
+				display: inline-block; /* Cambia el comportamiento del div a inline-block */
+				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
+			}
+	
+			/* Estilos para los párrafos */
+			.bloque-wena p {
+				margin: 0; /* Elimina el margen predeterminado de los párrafos dentro de los bloques */
+			}
+			.container {
+        width: 100%;
+        overflow: hidden;
+		}
+		.texto1, .texto2 {
+			width: 50%;
+			float: left;
+		}
+		.texto1 model-viewer {
+		width: 100%;
+		height: 300px; /* Ajusta la altura según sea necesario */
+		}
+		.texto1 img, .texto2 img {
+		max-width: 100%;
+		height: auto;
+		}
+		</style>
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../../index.html">edderVOLT</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../../subjects/subjAUDIO.html">AUDIO</a></li>
+							<li><a href="../../subjects/subjMEDICION.html">MEDICIÓN</a></li>
+							<li><a href="../../subjects/subjUAV.html">UAV</a></li>
+						</ul>
+					</nav>
+					<nav class="main">
+						<ul>
+							<li class="search">
+								<a class="fa-search" href="#search">Search</a>
+								<form id="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</li>
+							<!--
+							<li class="menu">
+								<a class="fa-bars" href="#menu">Menu</a>
+							</li>
+							-->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<section id="menu">
+
+					<!-- Search -->
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">INIT Wah</a></h2>
+										<p>Coiless Wah</p>
+									</div>
+									<div class="meta">
+										<!-- <time class="published" datetime="2024-05-05"> Mayo 5, 2024</time> -->
+										<center>
+											<a href="../../subjects/subjAUDIO.html" class="author"><span class="name big">AUDIO</span><img src="../../images/logos/audioLOGO.png" alt="" /></a>
+											<br>
+											<a href="../../curriculum.html" class="author"><span class="name">Bruno Pérez</span></a>
+										</center>
+									</div>
+								</header>
+								<span class="image featured"><img src="../../posts/INIT/distortionCONT/INIT_DIST_RENDER.png" alt="" /></span>
+								<p>
+									El pedal INIT Wah redefine el clásico efecto de Wah para guitarras con un enfoque innovador. Mediante un circuito simple y sin bobinas, 
+									ofrece una aplicación única de este efecto, brindando una experiencia distintiva y sin las complicaciones de diseño que conlleva el uso de
+									bobinas.
+								</p>
+								
+							</article>
+							<article class="post">
+
+								<header>
+									<div class="title">
+										<h2>Concepto</a></h2>
+									</div>
+								</header>
+								<div>
+									<p>
+										El concepto del diseño del INIT Wah, parte desde el punto de que el circuito clásico utilizado en todos lo pedales de Wah, como el Dunlop 
+										CryBaby, se basan en un filtro pasabanda variable.  se basan en un filtro pasabanda variable. Este filtro, crucial para el efecto, 
+										tradicionalmente utiliza un inductor específico que añade un aura de misticismo en torno a su 
+										impacto en el sonido final del dispositivo.
+									</p>
+									<p>
+										La presencia del inductor en el circuito plantea desafíos tanto en el diseño de la placa de circuito como en la posibilidad de alojarlo 
+										en una carcasa adecuada, dado que, en ocasiones, la inductancia puede ser considerablemente grande. 
+										Para evitar estos obstáculos y ofrecer una solución innovadora, se propuso la creación de un pedal de Wah que 
+										conservara el filtro pasabanda característico, pero que prescindiera del uso de inductores en su diseño.
+									</p>
+								</div>
+								<br>
+								<div class="container">
+									<div class="texto1">
+										<h3>Filtro pasa banda y efectos de Wah</h3>
+										<p>
+											Las bases de todo efecto de Wah, residen en el uso de un filtro pasa banda, el cual bloquea el paso de las señales eléctricas fuera de una "banda de frecuencias específica", 
+											la respuesta en frecuencia característica de este tipo de filtros cuenta con un particular pico de resonancia en el centro la banda de paso. Al variar la frecuencia de corte del filtro, se desplaza la banda, 
+											en conjunto con el pico, generando un característico efecto de vocalización sobre la señal de audio, el cual es comúnmente conocido como "Wah-Wah".
+										</p>
+										<p> 
+											Si bien este tipo de filtros pueden ser diseñados de multiples formas, tanto con inductores, como sin ellos. En el caso del INIT Wah, se decidió hacer uso de una 
+											aplicación particular de los amplificadores operacionales, la capacidad de simular inductores.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="distortionCONT/NOTBooster.png" alt="" style="width: 70%; height: auto;">
+										</center>
+									</div>
+								</div>
+								<br>
+								<div class="container">
+									<div class="texto1">
+										<center>
+											<img src="distortionCONT/HardClipper.png" alt="" style="width: 70%; height: auto;">
+										</center>
+									</div>
+									<div class="texto2">
+										<h3>Gyrators</h3>
+										<p> 
+											Un gyrator es un circuito particular que simula el comportamiento eléctrico de un inductor
+											combinando componentes activos, como transistores o amplificadores operacionales, con componentes pasivos, 
+											como resistencias y capacitores.
+										</p>
+										<p> 
+											Estos circuitos son ampliamente empleados en aplicaciones de audio, como ecualizadores o filtros. 
+											Una de sus cualidades notables, a parte del espacio ahorrado gracias al no tener que utilizar una bobina,
+											es el hecho de poder ajustar los valores de los componentes pasivos que los construyen,
+											mediante potenciómetros o capacitores variables. Este ajuste permite modificar
+											las características simuladas de la bobina, como el nivel del pico de resonancia, 
+											otorgando flexibilidad tanto en el diseño como en los requisitos de la aplicación.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Diseño</a></h2>
+									</div>
+								</header>
+
+								<div class="container">
+									<div class="texto1">
+										<h3>Diseño del circuito</h3>
+										<p>
+
+											Para el diseño de este efecto, se emplea un circuito específico que integra un amplificador operacional con una sección resonante en serie, 
+											creando así un filtro de notch. En este diseño, el amplificador operacional se encuentra en configuración no inversora,
+											lo que significa que cuando hay una frecuencia resonante, la impedancia del filtro disminuye a cero, permitiendo que el amplificador
+											funcione a máxima ganancia. Esto invierte la respuesta del filtro, convirtiéndolo en un filtro pasa banda ideal para ser utilizado en un efecto de Wah.
+										</p>
+										<p>
+											La simplicidad de este circuito lo hace ideal para ser utilizado en un prototipo de efecto, como es el caso del INIT Wah.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="distortionCONT/SIMULACION.png" alt="" style="width: 70%; height: auto; border-radius: 10px;">
+										</center>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div>
+									<center>
+										<h3>Diseño del circuito</h3>
+										<p>
+											La versión final del circuito, similar al mostrado anteriormente, presenta ciertas modificaciones. 
+											En lugar de la sección inductiva convencional, se incorpora el gyrator. 
+											Además, se agregan ciertos capacitores de acople, par las señales de entrada y salida, así como un capacitor adicional para filtrar 
+											ciertos picos que podrían provocar condiciones de inestabilidad en el circuito. Finalmente se añade un divisor de tensión en la entrada para 
+											atenuar la señal y evitar que se sature el amplificador operacional bajo condiciones de resonancia.	Estas adaptaciones garantizan un funcionamiento óptimo y estable del efecto en su 
+											implementación final.
+										</p>
+										<img src="wahCONT/wahCIRCUIT.png" alt="" style="width: 50%; height: auto; border-radius: 10px;">
+									</center>		
+								</div>
+								<center>
+									<h3>Diseño PCB</h3>
+								</center>
+								
+								<div class="container">
+									<div class="texto1">
+										<model-viewer src="wahCONT/initWAH.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+									</div>
+									<div class="texto2">
+										<p>
+											La PCB diseñada para este proyecto se compone de dos capas, con un plano de tierra en la capa inferior. 
+											Se ha priorizado minimizar tanto la cantidad como la longitud de las trazas en esta capa para aprovechar al máximo la 
+											integridad de la señal.
+										</p>
+										<p>
+											Las características clave del diseño de esta placa se centran en los componentes. Se ha optado por utilizar exclusivamente
+											componentes de montaje en superficie (THT) para facilitar el proceso de prototipado y pruebas. Además, se ha incluido un 
+											terminal de tornillo que permite la conexión de un potenciómetro ubicado fuera de la placa, para su control mediante un 
+											pedal de expresión. Por último, la placa cuenta con una alimentación proveniente de un convertidor DC-DC, proporcionando 
+											una fuente simétrica para garantizar el correcto funcionamiento de los amplificadores operacionales.
+										</p>
+									</div>
+								</div>
+
+								<div class="container">
+									<div class="texto1">
+										<center>
+											<h3>Ruteo del top </h3>
+											<div>
+												<img src="distortionCONT/TOP.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+									<div class="texto2">
+										<center>
+											<h3>Ruteo del bottom </h3>
+											<div>
+												<img src="distortionCONT/BOT.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+								</div>
+							</article>
+				    </div>					
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/bruno-pérez-8a021b26a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/BrunoEdPerezS" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="../../curriculum.html" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+						</ul>
+						<p class="copyright">&copy; edderVOLT
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+			<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+
+	</body>
+</html>
