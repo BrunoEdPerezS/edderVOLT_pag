@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>edderVOLT - INIT Series</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			/* Estilos para los bloques específicos */
+			.bloque-wena {
+				display: inline-block; /* Cambia el comportamiento del div a inline-block */
+				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
+				height: 100px;
+				
+			}	
+		</style>
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../../index.html">edderVOLT</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../../subjects/subjAUDIO.html">AUDIO</a></li>
+							<li><a href="../../subjects/subjMEDICION.html">MEDICIÓN</a></li>
+							<li><a href="../../subjects/subjUAV.html">UAV</a></li>
+						</ul>
+					</nav>
+					<nav class="main">
+						<ul>
+							<li class="search">
+								<a class="fa-search" href="#search">Search</a>
+								<form id="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</li>
+							<!--
+							<li class="menu">
+								<a class="fa-bars" href="#menu">Menu</a>
+							</li>
+							-->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<section id="menu">
+
+					<!-- Search -->
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+				</section>
+				
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Serie INIT</a></h2>
+										<p>Los primeros proyectos publicados en la página, efectos de audio y DSP.</p>
+									</div>
+									<div class="meta">
+										<!-- <time class="published" datetime="2024-05-05"> Mayo 5, 2024</time> -->
+										<center>
+											<a href="../../subjects/subjAUDIO.html" class="author"><span class="name big">AUDIO</span><img src="../../images/logos/audioLOGO.png" alt="" /></a>
+											<br>
+											<a href="../../curriculum.html" class="author"><span class="name">Bruno Pérez</span></a>
+										</center>
+									</div>
+								</header>
+								<span class="image featured"><img src="../../images/cBOARD/cBOARD_prot1.png" alt="" /></span>
+								<p>
+									La idea tras la Serie INIT, era hacer una pequeña incursión en el mundo de la ingeniería de audio, tomándo como punto de partida 
+									el diseño de circuitos de efectos para audio, enfocándolos en que el desarrollo pueda ser más adelante utilizado como base para la 
+									contrucción de pedales de guitarra o módulos de síntesis de sonido.
+								</p>
+								<p>
+									Se planificó el diseño y desarrollo de tres dispositivos: dos circuitos de efectos y una plataforma para procesamiento digital de señales. 
+									Los dos primeros circuitos de efecto se idearon con el objetivo de mantenerlos lo más analógicos posible, enfocándose en un circuito de 
+									distorsión y un circuito de ecualización.
+								</p>
+								<p>
+									Por otro lado, el tercer diseño contempla la construcción de un sistema de adquisición y procesamiento de señal. Este sistema, mediante el uso de un CODEC, 
+									digitaliza una señal de audio, para a través de técnicas de procesamiento digital de señales, manipularla o aplicarle efectos. Este sistema originalmente, también estaba
+									pensado para ser aplicado en pedales de guitarra o módulos de síntesis eurorack. Sin embargo, debido al potencial identificado en esta idea, se optó por diseñarlo como una plataforma 
+									versátil que no solo puediera ser utilizada para la creación de pedales o módulos de síntesis, sino también como una herramienta para la evaluación de algoritmos 
+									y métodos aplicados en este campo. 
+								</p>
+								<p>
+									De esta forma, los diseños realizados como parte de la Serie INIT son:
+								</p>
+								<ol type="A">
+									<li>
+										<b>INIT Distortion:</b> effecto de distorsión basado en hard clipping y diversas etapas de amplificacion 
+										mediante transistores FET.
+									</li>
+									<li><b>INIT EQ:</b>  ecualizados basado principalmente en circuitos de filtrado utilizando gyrators.</li>
+									<li><b>DSP Devboard:</b> una placa de desarrollo basada en un chips STM32F411, la cual incorpora un CODEC
+										de audio para realizar procesamiento de audio en tiempo real.
+									</li>
+								</ol>
+					</div>
+						<div>
+							<center>
+						<div class="bloque-wena">
+							<article class="mini-post">
+								<center>
+									<br>
+									<h3><a href="INIT_Distortion.html">INIT Distortion </a></h3>
+									<p>AUDIO</p>
+								</center>
+								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+							</article>
+						</div>
+						<div class="bloque-wena">
+							<article class="mini-post">
+								<center>
+									<br>
+									<h3><a href="INIT_EQ.html">INIT EQ </a></h3>
+									<p>AUDIO</p>
+								</center>
+								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer></a>
+							</article>
+						</div>
+						<div class="bloque-wena">
+							<article class="mini-post">
+								<center>
+									<br>
+									<h3><a href="INIT_Devboard.html">INIT Devboard </a></h3>
+									<p>AUDIO</p>
+								</center>
+								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+							</article>
+						</div>
+						</center>
+						</div>	
+					
+				<!-- Footer -->
+				<section id="footer">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/bruno-pérez-8a021b26a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/BrunoEdPerezS" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="../../curriculum.html" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+					</ul>
+					<p class="copyright">&copy; edderVOLT
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+			<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+
+	</body>
+</html>

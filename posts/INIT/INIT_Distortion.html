@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>edderVOLT - INIT Series</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			/* Estilos para los bloques específicos */
+			.bloque-wena {
+				display: inline-block; /* Cambia el comportamiento del div a inline-block */
+				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
+			}
+	
+			/* Estilos para los párrafos */
+			.bloque-wena p {
+				margin: 0; /* Elimina el margen predeterminado de los párrafos dentro de los bloques */
+			}
+			.container {
+        width: 100%;
+        overflow: hidden;
+		}
+		.texto1, .texto2 {
+			width: 50%;
+			float: left;
+		}
+		.texto1 model-viewer {
+		width: 100%;
+		height: 300px; /* Ajusta la altura según sea necesario */
+		}
+		.texto1 img, .texto2 img {
+		max-width: 100%;
+		height: auto;
+		}
+		</style>
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../../index.html">edderVOLT</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../../subjects/subjAUDIO.html">AUDIO</a></li>
+							<li><a href="../../subjects/subjMEDICION.html">MEDICIÓN</a></li>
+							<li><a href="../../subjects/subjUAV.html">UAV</a></li>
+						</ul>
+					</nav>
+					<nav class="main">
+						<ul>
+							<li class="search">
+								<a class="fa-search" href="#search">Search</a>
+								<form id="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</li>
+							<!--
+							<li class="menu">
+								<a class="fa-bars" href="#menu">Menu</a>
+							</li>
+							-->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<section id="menu">
+
+					<!-- Search -->
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">INIT Distortion</a></h2>
+										<p>Distorsión basada en hard clipping y compuertas NOT.</p>
+									</div>
+									<div class="meta">
+										<!-- <time class="published" datetime="2024-05-05"> Mayo 5, 2024</time> -->
+										<center>
+											<a href="../../subjects/subjAUDIO.html" class="author"><span class="name big">AUDIO</span><img src="../../images/logos/audioLOGO.png" alt="" /></a>
+											<br>
+											<a href="../../curriculum.html" class="author"><span class="name">Bruno Pérez</span></a>
+										</center>
+									</div>
+								</header>
+								<span class="image featured"><img src="../../posts/INIT/distortionCONT/INIT_DIST_RENDER.png" alt="" /></span>
+								<p>
+									El diseño del INIT Distortion fue impulsado por la idea de incorporar a la serie INIT uno de los efectos de audio más 
+									populares dentro de la industria musical: la distorsión. Sin embargo, los objetivos de diseño de este proyecto impusieron ciertas 
+									restricciones, ya que se buscaba crear un circuito que generara este efecto sin depender de técnicas digitales.
+								</p>
+								<p>
+									Se planificó desarrollar un dispositivo que pudiera generar un efecto de distorsión potente y característico. 
+									Tras evaluar diversas soluciones, se concluyó que la combinación de técnicas de preamplificación y hard clipping permitiría 
+									alcanzar el efecto deseado. Por lo tanto, se procedió al diseño de circuitos que posibilitaran la implementación de ambas técnicas,
+									para luego combinarlas de manera efectiva.
+								</p>
+								<br>
+								<div class="container">
+									<div class="texto1">
+										<h3>NOT Booster</h3>
+										<p>
+											Para realizar la etapa de preamplificación se utiliza un circuito particular, el cual se diseña a partir de 
+											compuertas lógicas NOT, creadas mediante el uso de transistores FET.
+										</p>
+										<p> 
+
+											El empleo de inversores lógicos con el propósito de amplificar señales ha sido identificado en el diseño de 
+											otros circuitos de distorsión, como se puede observar en el circuito del famoso pedal Red Llama. El cual, en su caso, 
+											hace uso de las múltiples compuertas NOT disponibles en un chip CD40498 para amplificar la señal y producir un efecto de
+											overdrive, que en ciertos casos excesivos llega a presentar caracteristicas propias de una distorsión fuzz.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="distortionCONT/NOTBooster.png" alt="" style="width: 70%; height: auto;">
+										</center>
+									</div>
+								</div>
+								<br>
+								<div class="container">
+									<div class="texto1">
+										<center>
+											<img src="distortionCONT/HardClipper.png" alt="" style="width: 70%; height: auto;">
+										</center>
+									</div>
+									<div class="texto2">
+										<h3>Hard Clipping</h3>
+										<p> 
+											Uno de las técnicas más utilizadas para generar efectos de distorsión en una señal de audio, es el clipping. 
+											El clipping es un condición que ocurre cuando una señal de audio excede los límites de voltaje que un dispositivo o circuito puede manejar. 
+											Cuando esto sucede, en lugar de seguir la forma de onda original, la parte de la señal que excede estos límites se corta o 
+											"recorta", produciendo un efecto de distorsión característico.
+										</p>
+										<p> 
+											El uso de un circuito particular con diodos ubicados de forma específica, permite inducir un efecto de recorte abrupto en una señal de audio, al cual se le conoce 
+											como "hard clipping", que posee un sonido caracteristico, utilizado en el diseño de muchos otros pedales y efectos de distorsión.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Diseño</a></h2>
+									</div>
+								</header>
+
+								<div class="container">
+									<div class="texto1">
+										<h3>Simulación</h3>
+										<p>
+											Se emplea software CAD para llevar a cabo el diseño de circuitos, centrándose en la evaluación de las decisiones de diseño a través de herramientas 
+											de simulación SPICE.
+										</p>
+										<p>
+											Se integra el uso de scripting mediante Python para automatizar ciertas operaciones con el simulador SPICE, lo que facilita el proceso de diseño de 
+											componentes como resistencias y capacitores. Además, permite examinar la respuesta del circuito ante modificaciones en elementos como 
+											potenciómetros de tono, ganancia o volumen.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="distortionCONT/SIMULACION.png" alt="" style="width: 70%; height: auto; border-radius: 10px;">
+										</center>
+									</div>
+								</div>
+								<div>
+									<center>
+										<h3>Diagrama funcional del circuito</h3>
+										<p>
+											El circuito consta de cuatro etapas. La primera etapa consiste en una preamplificación realizada 
+											por el circuito NOT Booster mencionado anteriormente. La señal de salida del booster se somete a un 
+											procesamiento paralelo: por un lado, se le aplica un recorte de bajos a través de un filtro Sallen Key, 
+											seguido de otra etapa de ganancia mediante el NOT Booster; por otro lado, se realiza una etapa de amplificación que deriva
+											a la sección de hard clipping. Finalmente, ambas señales se mezclan y se envían a la etapa de salida, 
+											implementada mediante un control de volumen de salida y un buffer.
+										</p>
+										<img src="distortionCONT/DIST_PATH.png" alt="" style="width: 50%; height: auto; border-radius: 10px;">
+									</center>		
+								</div>
+								<br>
+								<br>
+								<center>
+									<h3>Diseño PCB</h3>
+								</center>
+								
+								<div class="container">
+									<div class="texto1">
+										<model-viewer src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+									</div>
+									<div class="texto2">
+										<p>
+
+											El proceso de diseño termina con la elaboración de una placa de circuito impreso (PCB), 
+											destinada a servir como plataforma para pruebas y prototipado. Esta PCB proporciona una plataforma física
+											que permite poner a prueba el funcionamiento del circuito e integrarlo como parte de proyectos y soluciones futuras. 
+										</p>
+										<p>
+											La PCB cuenta con un diseño de dos capas, priorizando el uso de componentes SMD para optimizar el espacio y reducir las dimensiones 
+											del circuito. Como directiva de diseño, se prioriza mantener el plano inferior como referencia de tierra, al tiempo que se busca minimizar la cantidad y longitud de las trazas que 
+											lo atraviesan, esto permitiría reducir interferencias y preservar la integridad de la señal. Estas prácticas de diseño, buscan asegurar un rendimiento 
+											óptimo y una mayor fiabilidad del circuito.
+										</p>
+									</div>
+								</div>
+
+								<div class="container">
+									<div class="texto1">
+										<center>
+											<h3>Ruteo del top </h3>
+											<img src="distortionCONT/TOP.PNG" alt=""/>
+										</center>
+									</div>
+									<div class="texto2">
+										<center>
+											<h3>Ruteo del bottom </h3>
+											<img src="distortionCONT/BOT.PNG" alt=""/>
+										</center>
+									</div>
+								</div>
+							</article>
+				    </div>					
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/bruno-pérez-8a021b26a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/BrunoEdPerezS" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="../../curriculum.html" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+						</ul>
+						<p class="copyright">&copy; edderVOLT
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+			<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+
+	</body>
+</html>
