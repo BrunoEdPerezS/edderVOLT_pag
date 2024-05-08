@@ -15,9 +15,24 @@
 			.bloque-wena {
 				display: inline-block; /* Cambia el comportamiento del div a inline-block */
 				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
+				margin-bottom: 50px;
 				height: 100px;
-				
-			}	
+			}
+
+			.bloque-wena {
+			display: inline-block;
+			margin-right: 20px;
+			margin-bottom: 200px;
+			height: 100px;
+			}
+
+			/* Media query para pantallas pequeñas */
+			@media (max-width: 600px) {
+			.bloque-wena {
+				display: block; /* Cambia a un formato de bloque para apilar verticalmente */
+				margin-bottom: 200px; /* Agrega espacio entre los bloques apilados */
+			}
+			}
 		</style>
 	</head>
 	<body class="single is-preload">
@@ -25,7 +40,7 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
+				<!-- Header de subjects-->
 				<header id="header">
 					<h1><a href="../../index.html">edderVOLT</a></h1>
 					<nav class="links">
@@ -37,29 +52,35 @@
 					</nav>
 					<nav class="main">
 						<ul>
-							<li class="search">
-								<a class="fa-search" href="#search">Search</a>
-								<form id="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</li>
-							<!--
 							<li class="menu">
 								<a class="fa-bars" href="#menu">Menu</a>
 							</li>
-							-->
+							
 						</ul>
 					</nav>
 				</header>
 
 			<!-- Menu -->
 				<section id="menu">
-
-					<!-- Search -->
+						<!-- Links -->
 						<section>
-							<form class="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
+							<ul class="links">
+								<li>
+									<a href="../../subjects/subjAUDIO.html">
+										<h3>AUDIO</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjMEDICION.html">
+										<h3>MEDICIÓN</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjUAV.html">
+										<h3>UAV</h3>
+									</a>
+								</li>
+							</ul>
 						</section>
 				</section>
 				
@@ -116,48 +137,44 @@
 					</div>
 						<div>
 							<center>
-						<div class="bloque-wena">
-							<article class="mini-post">
-								<center>
-									<br>
-									<h3><a href="INIT_Distortion.html">INIT Distortion </a></h3>
-									<p>AUDIO</p>
-								</center>
-								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
-							</article>
-						</div>
-						<div class="bloque-wena">
-							<article class="mini-post">
-								<center>
-									<br>
-									<h3><a href="INIT_Wah.html">INIT Wah </a></h3>
-									<p>AUDIO</p>
-								</center>
-								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer></a>
-							</article>
-						</div>
-						<div class="bloque-wena">
-							<article class="mini-post">
-								<center>
-									<br>
-									<h3><a href="INIT_Devboard.html">INIT Devboard </a></h3>
-									<p>AUDIO</p>
-								</center>
-								<model-viewer id="myModel" src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
-							</article>
-						</div>
+								<div class="bloque-wena">
+									<article class="mini-post">
+									  <center>
+										<br>
+										<h3><a href="INIT_Distortion.html">INIT Distortion</a></h3>
+										<p>AUDIO</p>
+									  </center>
+									  <model-viewer src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+									</article>
+								  </div>
+								  
+								  <div class="bloque-wena">
+									<article class="mini-post">
+									  <center>
+										<br>
+										<h3><a href="INIT_Wah.html">INIT Wah</a></h3>
+										<p>AUDIO</p>
+									  </center>
+									  <model-viewer src="wahCONT/initWAH.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+									</article>
+								  </div>
+								  
+								  <div class="bloque-wena">
+									<article class="mini-post">
+									  <center>
+										<br>
+										<h3><a href="INIT_Devboard.html">INIT Devboard</a></h3>
+										<p>AUDIO</p>
+									  </center>
+									  <model-viewer src="distortionCONT/INITdist_3d.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+									</article>
+								  </div>
 						</center>
 						</div>	
 					
 				<!-- Footer -->
 				<section id="footer">
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/bruno-pérez-8a021b26a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/BrunoEdPerezS" class="icon brands fa-github"><span class="label">Github</span></a></li>

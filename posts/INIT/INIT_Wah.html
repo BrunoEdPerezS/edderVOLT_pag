@@ -11,32 +11,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
 		<style>
-			/* Estilos para los bloques específicos */
-			.bloque-wena {
-				display: inline-block; /* Cambia el comportamiento del div a inline-block */
-				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
-			}
-	
-			/* Estilos para los párrafos */
-			.bloque-wena p {
-				margin: 0; /* Elimina el margen predeterminado de los párrafos dentro de los bloques */
-			}
-			.container {
-        width: 100%;
-        overflow: hidden;
-		}
-		.texto1, .texto2 {
-			width: 50%;
-			float: left;
-		}
-		.texto1 model-viewer {
-		width: 100%;
-		height: 300px; /* Ajusta la altura según sea necesario */
-		}
-		.texto1 img, .texto2 img {
-		max-width: 100%;
-		height: auto;
-		}
+				/* Estilos para los bloques específicos */
+				.bloque-wena {
+				display: inline-block;
+				margin-right: 20px;
+				vertical-align: top; /* Alinea los bloques verticalmente en la parte superior */
+				}
+
+				/* Estilos para los párrafos */
+				.bloque-wena p {
+				margin: 0;
+				}
+
+				/* Estilos para el contenedor */
+				.container {
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				flex-wrap: wrap; /* Permite que los bloques se ajusten automáticamente a la pantalla */
+				}
+
+				/* Estilos para los textos */
+				.texto1, .texto2 {
+				width: 50%; /* Ocupa el 50% del ancho del contenedor */
+				}
+
+				/* Media query para pantallas pequeñas */
+				@media (max-width: 768px) {
+					.bloque-wena {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 20px;
+					}
+					.texto1,
+					.texto2 {
+						width: 100%;
+					}
+
+					/* Cambiar el orden de los elementos dentro del contenedor en pantallas divididas */
+					.container.cambiar-orden .texto1 {
+						order: 2; /* Cambia el orden a segundo */
+					}
+					.container.cambiar-orden .texto2 {
+						order: 1; /* Cambia el orden a primero */
+					}
+				}
 		</style>
 	</head>
 	<body class="single is-preload">
@@ -56,29 +75,34 @@
 					</nav>
 					<nav class="main">
 						<ul>
-							<li class="search">
-								<a class="fa-search" href="#search">Search</a>
-								<form id="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</li>
-							<!--
 							<li class="menu">
 								<a class="fa-bars" href="#menu">Menu</a>
 							</li>
-							-->
 						</ul>
 					</nav>
 				</header>
 
-			<!-- Menu -->
+				<!-- Menu -->
 				<section id="menu">
-
-					<!-- Search -->
+						<!-- Links -->
 						<section>
-							<form class="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
+							<ul class="links">
+								<li>
+									<a href="../../subjects/subjAUDIO.html">
+										<h3>AUDIO</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjMEDICION.html">
+										<h3>MEDICIÓN</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjUAV.html">
+										<h3>UAV</h3>
+									</a>
+								</li>
+							</ul>
 						</section>
 				</section>
 
@@ -156,7 +180,8 @@
 									</div>
 								</div>
 								<br>
-								<div class="container" style="display: flex; align-items: center;">
+								<!-- ACA SE DEBE ALTERNAR EL ORDEN-->
+								<div class="container cambiar-orden" style="display: flex; align-items: center;">
 									<div class="texto1">
 										<center>
 											<img src="wahCONT/gyratorEQ.png" alt="" style="width: 70%; height: auto;">
@@ -211,7 +236,7 @@
 								<br>
 								<div>
 									<center>
-										<h3>Diseño del circuito</h3>
+										<h3>Esquemático final</h3>
 										<p>
 											La versión final del circuito, similar al mostrado anteriormente, presenta ciertas modificaciones. 
 											En lugar de la sección inductiva convencional, se incorpora el gyrator. 
@@ -223,13 +248,18 @@
 										<img src="wahCONT/wahCIRCUIT.png" alt="" style="width: 50%; height: auto; border-radius: 10px;">
 									</center>		
 								</div>
+								<br>
+								<br>
 								<center>
-									<h3>Diseño PCB</h3>
+									<h2>Diseño PCB</h2>
 								</center>
 								
-								<div class="container">
+								<div class="container" style="display: flex; align-items: center;">
 									<div class="texto1">
-										<model-viewer src="wahCONT/initWAH.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+										<center>
+											<model-viewer src="wahCONT/initWAH.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+										</center>
+										
 									</div>
 									<div class="texto2">
 										<p>
