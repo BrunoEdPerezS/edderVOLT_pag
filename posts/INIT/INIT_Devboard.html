@@ -13,15 +13,50 @@
 		<style>
 			/* Estilos para los bloques específicos */
 			.bloque-wena {
-				display: inline-block; /* Cambia el comportamiento del div a inline-block */
-				margin-right: 20px; /* Añade un poco de espacio entre los bloques */
+			display: inline-block;
+			margin-right: 20px;
+			vertical-align: top; /* Alinea los bloques verticalmente en la parte superior */
 			}
-	
+
 			/* Estilos para los párrafos */
 			.bloque-wena p {
-				margin: 0; /* Elimina el margen predeterminado de los párrafos dentro de los bloques */
+			margin: 0;
 			}
-		</style>
+
+			/* Estilos para el contenedor */
+			.container {
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			flex-wrap: wrap; /* Permite que los bloques se ajusten automáticamente a la pantalla */
+			}
+
+			/* Estilos para los textos */
+			.texto1, .texto2 {
+			width: 50%; /* Ocupa el 50% del ancho del contenedor */
+			}
+
+			/* Media query para pantallas pequeñas */
+			@media (max-width: 768px) {
+				.bloque-wena {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+				.texto1,
+				.texto2 {
+					width: 100%;
+				}
+
+				/* Cambiar el orden de los elementos dentro del contenedor en pantallas divididas */
+				.container.cambiar-orden .texto1 {
+					order: 2; /* Cambia el orden a segundo */
+				}
+				.container.cambiar-orden .texto2 {
+					order: 1; /* Cambia el orden a primero */
+				}
+			}
+	</style>
 	</head>
 	<body class="single is-preload">
 
@@ -40,29 +75,34 @@
 					</nav>
 					<nav class="main">
 						<ul>
-							<li class="search">
-								<a class="fa-search" href="#search">Search</a>
-								<form id="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</li>
-							<!--
 							<li class="menu">
 								<a class="fa-bars" href="#menu">Menu</a>
 							</li>
-							-->
 						</ul>
 					</nav>
 				</header>
 
-			<!-- Menu -->
+				<!-- Menu -->
 				<section id="menu">
-
-					<!-- Search -->
+						<!-- Links -->
 						<section>
-							<form class="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
+							<ul class="links">
+								<li>
+									<a href="../../subjects/subjAUDIO.html">
+										<h3>AUDIO</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjMEDICION.html">
+										<h3>MEDICIÓN</h3>
+									</a>
+								</li>
+								<li>
+									<a href="../../subjects/subjUAV.html">
+										<h3>UAV</h3>
+									</a>
+								</li>
+							</ul>
 						</section>
 				</section>
 
@@ -74,7 +114,7 @@
 								<header>
 									<div class="title">
 										<h2><a href="#">INIT Devboard</a></h2>
-										<p>Los primeros proyectos publicados en la página, efectos de audio y DSP.</p>
+										<p>DSP Audio pataform based in STM32</p>
 									</div>
 									<div class="meta">
 										<!-- <time class="published" datetime="2024-05-05"> Mayo 5, 2024</time> -->
@@ -85,73 +125,167 @@
 										</center>
 									</div>
 								</header>
-								<span class="image featured"><img src="../../images/cBOARD/cBOARD_prot1.png" alt="" /></span>
+								<span class="image featured"><img src="../../posts/INIT/devKIT/renderUNO.png" alt="" /></span>
 								<p>
-									La idea tras la Serie INIT, era hacer una pequeña incursión en el mundo de la ingeniería de audio,
-									trabajando con efectos en su mayor parte analógicos, que puedan más adelante 
-									ser implementados a modo de pedales de efectos o módulos eurorack.
-								</p>
-								<p>
-									Se planificó el diseño y desarrollo de tres dispositivos: dos circuitos de efectos y una plataforma para procesamiento digital de señales. 
-									Los dos primeros circuitos de efecto se idearon con el objetivo de mantenerlos lo más analógicos posible, enfocándose en un circuito de 
-									distorsión y un circuito de ecualización, con la intención de que pudieran ser empleados en pedales de guitarra en el futuro.
-								</p>
-								<p>
-									Por otro lado, el tercer diseño contempla la construcción de un sistema de adquisición y procesamiento de señal. Este sistema, mediante el uso de una CODEC, 
-									digitaliza una señal de audio y la transforma a través de algoritmos y procesamiento digital de señales para generar efectos. Este sistema originalmente, también estaba
-									pensado para ser aplicado en pedales de guitarra o módulos de síntesis eurorack. Sin embargo, debido al potencial identificado en esta idea, se optó por diseñarlo como una plataforma 
-									versátil que no solo puediera ser utilizada para la creación de pedales o módulos de síntesis, sino también como una herramienta para la evaluación de algoritmos 
-									y métodos aplicados en este campo. 
-								</p>
-								<p>
-									De esta forma, los diseños realizados como parte de la Serie INIT son:
-								</p>
-								<ol type="A">
-									<li>
-										<b>INIT Distortion:</b> effecto de distorsión basado en hard clipping y diversas etapas de amplificacion 
-										mediante inversores CMOS.
-									</li>
-									<li><b>INIT EQ:</b>  ecualizados basado principalmente en circuitos de filtrado utilizando gyrators.</li>
-									<li><b>DSP Devboard:</b> una placa de desarrollo basada en un chips STM32F411, la cual incorpora un CODEC
-										de audio para realizar procesamiento de audio en tiempo real.
-									</li>
-								</ol>
-					</div>
-					<div>
-						<center>
-					<div class="bloque-wena">
-						<article class="mini-post">
-							<center>
+									Init Devboard nace como la evolución de una idea inicialmente centrada en la construcción de un 
+									dispositivo de efectos digitales basado en DSP. Sin embargo, esta idea se transformó en el desarrollo de 
+									una placa de desarrollo basada en la combinación de un chip STM32 y un CODEC de audio, concebida no solo como un procesador 
+									de efectos, sino también como un kit de prueba para la experimentación con algoritmos, soluciones y proyectos futuros 
+									relacionados con DSP y audio.
+								</p>														
+							</article>
+							<article class="post">
+
+								<header>
+									<div class="title">
+										<h2>Concepto</a></h2>
+									</div>
+								</header>
+								<div>
+
+								</div>
 								<br>
-								<h3><a href="single.html">INIT Distortion </a></h3>
-								<p>AUDIO</p>
-							</center>
-							<a href="single.html" class="image"><img src="../../images/pic04.jpg" alt="" /></a>
-						</article>
-					</div>
-					<div class="bloque-wena">
-						<article class="mini-post">
-							<center>
+								<div class="container" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<h3>Características principales</h3>
+										<p>
+											La idea central del diseño tras INIT Devkit, es implementar en conjunto un CODEC de audio con un chip STM32. El codec se encargaría
+											tanto de muestrear las señales de audio de entrada, como de reproducir las señales de salida, mientras que el STM32 se encarga del procesamiento del
+											audio.
+										</p>
+										<p>
+											La placa cuenta con dos entradas de audio, correspondientes a los canales izquierdo y derecho del CODEC, junto con sus respectivas salidas. Así como con capacidades para
+											conectividad vía USB y SWD.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="devKIT/STM32F4Series.png" alt="" style="width: 25%; height: auto;">
+										</center>
+									</div>
+								</div>
 								<br>
-								<h3><a href="single.html">INIT EQ </a></h3>
-								<p>AUDIO</p>
-							</center>
-								<a href="#" class="author"><img src="images\logos\audioLOGO.png" alt="" /></a>
-							<a href="single.html" class="image"><img src="../../images/pic04.jpg" alt="" /></a>
-						</article>
-					</div>
-					<div class="bloque-wena">
-						<article class="mini-post">
-							<center>
+								<div class="container cambiar-orden" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<center>
+											<img src="devKIT/codec_mcu.png" alt="" style="width: 70%; height: auto;">
+										</center>
+									</div>
+									<div class="texto2">
+										<h3>Interfaz CODEC-MCU</h3>
+										<p> 
+											La placa se centra en la interacción entre un codec de audio y un microcontrolador(MCU) de alto rendimiento, 
+											posibilitando el muestreo, reproducción y procesamiento de señales de audio. El sistema es construido entorno al microcontrolador
+										    STM32F411, este dispositivo Cortex-M4 de 32 bits destaca por su unidad de punto flotante de precisión única y su conjunto 
+											completo de instrucciones DSP, siendo óptimo para aplicaciones de audio y señal, además de contar con una unidad 
+											de protección de memoria para mejorar la seguridad de las aplicaciones. El codec de audio SSM2604 complementa las capacidades 
+											del MCU para la manipulación de señales de audio, siendo este, un códec estéreo de alta calidad y bajo consumo de energía, 
+											con dos canales de ADC y DAC de 24 bits cada uno, diseñado exclusivamente
+											para aplicaciones portátiles de audio digital.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Diseño</a></h2>
+									</div>
+								</header>
+
+								<div class="container" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<h3>Interfaz USB</h3>
+										<p>
+											El diseño destaca por la inclusión de conectividad USB, aprovechando las capacidades del chip 
+											STM32F411 para utilizar este protocolo. Esta integración posibilita diversas funciones 
+											como programación, depuración y lectura de registros, de forma simple, ampliando significativamente las posibilidades de uso 
+											de la placa.
+										</p>
+									</div>
+									<div class="texto2">
+										<center>
+											<img src="devKIT/usbCON.png" alt="" style="width: 70%; height: auto; border-radius: 10px;">
+										</center>
+									</div>
+								</div>
 								<br>
-								<h3><a href="single.html">INIT Devboard </a></h3>
-								<p>AUDIO</p>
-							</center>
-							<a href="single.html" class="image"><img src="../../images/pic04.jpg" alt="" /></a>
-						</article>
-					</div>
-				    </center>
-					</div>
+								<br>
+								<div>
+									<center>
+										<h3>Diagrama de bloques del sistema</h3>
+										<p>
+											La placa está equipada con dos entradas y salidas analógicas, diseñadas para las señales de audio, 
+											y se conectan con el exterior a través de jacks de 6.35mm. Estas señales son procesadas por el CODEC, el cual 
+											se comunica con el MCU mediante el protocolo I2S para el envío de señales digitales de audio. Además, tanto el 
+											CODEC como el MCU emplean una interfaz I2C para la comunicación exclusiva de edición de registros y configuración. 
+											Las opciones de comunicación con el exterior, implementadas en la placa incluyen la ya nombrada interfaz USB y una interfaz SWD para la 
+											programación y depuración del MCU.
+										</p>
+										<img src="devKIT/codec_mcu_EXPAND.png" alt="" style="width: 50%; height: auto; border-radius: 10px;">
+									</center>		
+								</div>
+								<br>
+								<br>
+								<center>
+									<h2>Diseño PCB</h2>
+								</center>
+								<div class="container" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<center>
+											<model-viewer src="devKIT/devKIT3D.glb" alt="Descripción del modelo" auto-rotate camera-controls></model-viewer>
+										</center>
+									</div>
+									<div class="texto2">
+										La PCB diseñada es de 4 capas, con dos capas exteriores dedicadas a señales y tierra, y una capa para alimentación 
+										junto con otra exclusiva para tierra. Dentro del diseño se incluyen circuitos específicos, como un multiplexor de potencia 
+										utilizando el chip TPS2116 para alternar entre dos fuentes de alimentación posibles: una conexión DC de 9V o la alimentación 
+										a través del conector USB. Este circuito también integra varios reguladores de tensión para mantener estable la alimentación 
+										de la placa. Además, se implementan medidas de seguridad en la interfaz USB, incluyendo diodos para protección contra descargas 
+										electrostáticas (ESD) y un fusible PTC para protección contra sobrecorrientes.
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="container" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<center>
+											<h3>Ruteo del top </h3>
+											<div>
+												<img src="devKIT/TOP.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+									<div class="texto2">
+										<center>
+											<h3>Ruteo interior 1 </h3>
+											<div>
+												<img src="devKIT/IN1.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+								</div>
+								<div class="container" style="display: flex; align-items: center;">
+									<div class="texto1">
+										<center>
+											<h3>Ruteo del interior 2 </h3>
+											<div>
+												<img src="devKIT/IN2.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+									<div class="texto2">
+										<center>
+											<h3>Ruteo del bottom </h3>
+											<div>
+												<img src="devKIT/BOT.png" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+											</div>
+										</center>
+									</div>
+								</div>
+							</article>
+				    </div>	
+					<p> El diseño se encuentra disponible en el siguiente respositorio: <a href="https://github.com/BrunoEdPerezS/SERIE_INIT">https://github.com/BrunoEdPerezS/SERIE_INIT.</a> </p>							
 
 				<!-- Footer -->
 					<section id="footer">
@@ -171,6 +305,7 @@
 			<script src="../../assets/js/breakpoints.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
+			<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
 
 	</body>
 </html>
